@@ -94,7 +94,7 @@ class ODEProblem(nn.Module):
             )
 
         else:
-            print("Your vector field does not have `nn.Parameters` to optimize.")
+            #print("Your vector field does not have `nn.Parameters` to optimize.")
             dummy_parameter = nn.Parameter(torch.zeros(1))
             self.vf.register_parameter("dummy_parameter", dummy_parameter)
             self.vf_params = torch.cat(
